@@ -2,13 +2,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.think</groupId>
-    <artifactId>BootShardingStudy</artifactId>
+    <groupId>com.joeysin</groupId>
+    <artifactId>springboot-shardingJdbc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>BootShardingStudy</name>
-    <url>http://maven.apache.org</url>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -17,7 +15,7 @@
     </parent>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sharding-jdbc.version>1.4.1</sharding-jdbc.version>
+        <sharding-jdbc.version>3.0.0.M1</sharding-jdbc.version>
         <mybatis.page.version>4.1.6</mybatis.page.version>
         <mybatis.version>3.4.0</mybatis.version>
         <durid.version>1.0.12</durid.version>
@@ -61,18 +59,13 @@
         </dependency>
 
         <dependency>
-            <groupId>com.dangdang</groupId>
-            <artifactId>sharding-jdbc-core</artifactId>
+            <groupId>io.shardingsphere</groupId>
+            <artifactId>sharding-jdbc</artifactId>
             <version>${sharding-jdbc.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.dangdang</groupId>
-            <artifactId>sharding-jdbc-config-spring</artifactId>
-            <version>${sharding-jdbc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.dangdang</groupId>
-            <artifactId>sharding-jdbc-self-id-generator</artifactId>
+            <groupId>io.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-namespace</artifactId>
             <version>${sharding-jdbc.version}</version>
         </dependency>
         <dependency>

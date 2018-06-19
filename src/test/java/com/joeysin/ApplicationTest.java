@@ -1,6 +1,6 @@
 package com.joeysin;
 
-import com.joeysin.dao.OrderMapper;
+import com.joeysin.dao.OrderRepository;
 import com.joeysin.domain.Order;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +15,7 @@ import java.util.List;
 public class ApplicationTest {
 
     @Autowired
-    private OrderMapper orderMapper;
+    private OrderRepository orderRepository;
 
 
     /**
@@ -25,10 +25,11 @@ public class ApplicationTest {
      */
     @Test
     public void t1() {
+        orderRepository.truncateTable();
         Order order = new Order();
-        order.setUserId(2);
+        order.setUserId(1);
         order.setOrderId(2);
-        orderMapper.insert(order);
+        orderRepository.insert(order);
     }
 
 
@@ -38,7 +39,7 @@ public class ApplicationTest {
      */
     @Test
     public void t2() {
-        List<Order> orders = orderMapper.findByUserId(1);
+        List<Order> orders = orderRepository.findByUserId(1);
         orders.stream().forEach(order -> System.out.println(order.toString()));
     }
 
@@ -49,7 +50,7 @@ public class ApplicationTest {
      */
     @Test
     public void t3() {
-        List<Order> orders = orderMapper.findByOrderId(1);
+        List<Order> orders = orderRepository.findByOrderId(1);
         orders.stream().forEach(order -> System.out.println(order.toString()));
 
     }

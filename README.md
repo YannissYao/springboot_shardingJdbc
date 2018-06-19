@@ -1,13 +1,21 @@
 # springboot-shardingjdbc
 
+说明：
+    1. 克隆sharding-sphere 3.X 版本   git clone https://github.com/sharding-sphere/sharding-sphere
+    2. 编译  mvn clean install -DskipTests
+    3. 官网地址： http://shardingjdbc.io/index_zh.html
+    4. 本项目单元测试 test
+
 
 
 简介：
 
     1.框架
         spring boot
-        sharding-jdbc
-        mybatis 
+        io.shardingsphere.sharding-jdbc 3.0
+        mybatis
+        HikariCP
+         
      
     2.数据库：
         在本地使用两个DB，分别为 test0,test1, sql脚本在项目中

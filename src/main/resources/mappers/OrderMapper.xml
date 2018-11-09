@@ -7,7 +7,7 @@
     </resultMap>
 
 
-    <select id="findByUserId" parameterType="Integer" >
+    <select id="findByUserId" parameterType="Integer">
         SELECT * FROM t_order WHERE user_id=#{id}
     </select>
 

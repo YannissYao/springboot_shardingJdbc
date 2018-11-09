@@ -1,6 +1,7 @@
-# springboot-shardingjdbc
+# springboot-shardingjdbc  http://shardingsphere.io
 
 说明：
+
     1. 克隆sharding-sphere 3.X 版本   git clone https://github.com/sharding-sphere/sharding-sphere
     2. 编译  mvn clean install -DskipTests
     3. 官网地址： http://shardingjdbc.io/index_zh.html
